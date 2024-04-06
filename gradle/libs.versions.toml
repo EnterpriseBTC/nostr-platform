@@ -4,5 +4,58 @@
 [versions]
 kotlin-gradle-plugin = "1.9.20"
 
+# 3pp dependency versions
+jakarta = "10.0.0"
+jackson = "2.16.1"
+kotest = "5.8.0"
+mockk = "1.13.8"
+kotlin-logging = "6.0.3"
+quarkus = "3.7.1"
+slf4j = "2.0.9"
+
+# plugin versions
+jandex = "1.1.0"
+kotlin = "1.9.22"
+dependency-analysis = "1.29.0"
+
 [libraries]
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-gradle-plugin" }
+
+# jakarta
+jakarta-bom = { module = "jakarta.platform:jakarta.jakartaee-bom", version.ref = "jakarta" }
+
+# jackson bom
+jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version.ref = "jackson" }
+
+
+# kotest
+kotest-bom = { module = "io.kotest:kotest-bom", version.ref = "kotest" }
+kotest-assertions-core-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
+kotest-framework-api = { module = "io.kotest:kotest-framework-api", version.ref = "kotest" }
+kotest-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
+
+# mockk
+mockk-jvm = { module = "io.mockk:mockk-jvm", version.ref = "mockk" }
+mockk-dsl = { module = "io.mockk:mockk-dsl", version.ref = "mockk" }
+
+# kotlin logging
+kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging" }
+
+# quarkus
+quarkus-bom = { module = "io.quarkus:quarkus-bom", version.ref = "quarkus" }
+
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+
+[plugins]
+
+# kotlin
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+
+# quarkus
+quarkus = { id = "io.quarkus", version.ref = "quarkus" }
+jandex = { id = "org.kordamp.gradle.jandex", version.ref = "jandex" }
+
+# dependency hygiene
+dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependency-analysis"}

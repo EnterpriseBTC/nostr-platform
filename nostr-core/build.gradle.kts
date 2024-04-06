@@ -10,4 +10,6 @@ plugins {
 
 dependencies {
 
+    implementation(libs.kotlin.logging)
+
 }
