@@ -10,6 +10,14 @@ plugins {
 
 dependencies {
 
+    api(libs.okHttp)
+    implementation(libs.acinqSecp256k1)
+    implementation(libs.kotlinxCoroutines)
+    implementation(libs.okIo)
+    implementation(libs.secureRandom)
+    implementation(libs.moshi)
+    implementation(libs.guava)
+
     implementation(libs.kotlin.logging)
 
 }

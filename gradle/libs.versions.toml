@@ -5,21 +5,38 @@
 kotlin-gradle-plugin = "1.9.20"
 
 # 3pp dependency versions
+acinqSecp256 = "0.15.0"
+guava = "31.1-jre"
 jakarta = "10.0.0"
 jackson = "2.16.1"
 kotest = "5.8.0"
 mockk = "1.13.8"
+moshi = "1.15.0"
+kotlinCoroutines = "1.7.2"
 kotlin-logging = "6.0.3"
+okIo = "3.4.0"
+okHttp = "5.0.0-alpha.11"
 quarkus = "3.7.1"
 slf4j = "2.0.9"
+secureRandom = "0.3.1"
 
 # plugin versions
 jandex = "1.1.0"
-kotlin = "1.9.22"
+kotlin = "1.9.23"
 dependency-analysis = "1.29.0"
 
 [libraries]
+
+acinqSecp256k1 = { module = "fr.acinq.secp256k1:secp256k1-kmp", version.ref = "acinqSecp256" }
+acinqSecp256k1JniJvm = { module = "fr.acinq.secp256k1:secp256k1-kmp-jni-jvm", version.ref = "acinqSecp256" }
+acinqSecp256k1Jvm = { module = "fr.acinq.secp256k1:secp256k1-kmp-jvm", version.ref = "acinqSecp256" }
+
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-gradle-plugin" }
+
+kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
+
 
 # jakarta
 jakarta-bom = { module = "jakarta.platform:jakarta.jakartaee-bom", version.ref = "jakarta" }
@@ -41,8 +58,18 @@ mockk-dsl = { module = "io.mockk:mockk-dsl", version.ref = "mockk" }
 # kotlin logging
 kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging" }
 
+# okio
+okIo = { module = "com.squareup.okio:okio", version.ref = "okIo" }
+
+okHttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okHttp" }
+
+moshi = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+
 # quarkus
 quarkus-bom = { module = "io.quarkus:quarkus-bom", version.ref = "quarkus" }
+
+secureRandom = { module = "org.kotlincrypto:secure-random", version.ref = "secureRandom" }
+
 
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 
